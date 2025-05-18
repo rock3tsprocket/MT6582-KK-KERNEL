@@ -1,3 +1,5 @@
+ARCH_MTK_PLATFORM := mt6582
+
 menuconfig MEDIATEK_SOLUTION
         bool "MediaTek Properitary Configuration"
         help
