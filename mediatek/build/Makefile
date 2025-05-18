@@ -1,15 +1,19 @@
 ifneq (true,$(__mtk_main_makefile_include))
 __mtk_main_makefile_include := true
 
-#Define some bariables for the compilation
-export TARGET_BUILD_VARIANT="user" TARGET_PRODUCT="mt6582" MTK_ROOT_CUSTOM="../mediatek/custom/" TARGET_KERNEL_VERSION="mt6582" ARCH="arm" ARCH_MTK_PLATFORM="mt6582" TARGET_PROJECT="mt6582"
+#Define some variables for the compilation
+TARGET_BUILD_VARIANT := user
+TARGET_PRODUCT := mt6582
+MTK_ROOT_CUSTOM := ../mediatek/custom/
+TARGET_KERNEL_VERSION := mt6582
+ARCH_MTK_PLATFORM := mt6582
 
 # Makefile - global makefile for all building system to include
 ifneq (,$(PROJECT))
 TARGET_PRODUCT := $(PROJECT)
 endif
-ifeq (emulator,$(TARGET_PRODUCT))
-TARGET_PRODUCT := generic
+ifeq (emulator,mt6582)
+TARGET_PRODUCT := mt6582
 endif
 _entering_makefile_list_ := $(MAKEFILE_LIST)
 ifeq (,$(TARGET_PRODUCT))
